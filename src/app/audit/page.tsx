@@ -45,6 +45,12 @@ export default function AuditPage() {
         setIsSubmitted(true);
     };
 
+    const fadeIn = {
+        initial: { opacity: 0, y: 20 },
+        animate: { opacity: 1, y: 0 },
+        transition: { duration: 0.6 }
+    };
+
     if (isSubmitted) {
         return (
             <div className="min-h-screen bg-industrial-slate text-industrial-white flex items-center justify-center p-6 bg-grid-pattern bg-[size:40px_40px]">
@@ -82,23 +88,32 @@ export default function AuditPage() {
 
                 {/* Left Section: Value Proposition */}
                 <div className="lg:col-span-5 space-y-12">
-                    <motion.div
-                        initial={{ opacity: 0, x: -20 }}
-                        animate={{ opacity: 1, x: 0 }}
-                        transition={{ duration: 0.6 }}
-                    >
-                        <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-industrial-blue/10 border border-industrial-blue/20 mb-6 font-mono text-[10px] text-industrial-blue uppercase tracking-widest">
+                    <header>
+                        <motion.div
+                            {...fadeIn}
+                            className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-industrial-blue/10 border border-industrial-blue/20 mb-6 font-mono text-[10px] text-industrial-blue uppercase tracking-widest"
+                        >
                             <Search className="w-3 h-3" />
                             <span>STRATEGIC_DIAGNOSTIC_INTAKE</span>
-                        </div>
-                        <h1 className="text-4xl sm:text-6xl font-extrabold tracking-tighter mb-8 leading-[0.95]">
+                        </motion.div>
+                        <motion.h1
+                            initial={{ opacity: 0, x: -30 }}
+                            animate={{ opacity: 1, x: 0 }}
+                            transition={{ duration: 0.8 }}
+                            className="text-4xl sm:text-6xl font-extrabold tracking-tighter mb-8 leading-[0.95]"
+                        >
                             Stop guessing. <br />
                             <span className="text-industrial-blue">Scale with intent.</span>
-                        </h1>
-                        <p className="text-industrial-white/50 text-lg leading-relaxed max-w-md">
+                        </motion.h1>
+                        <motion.p
+                            initial={{ opacity: 0, x: 30 }}
+                            animate={{ opacity: 1, x: 0 }}
+                            transition={{ duration: 0.8, delay: 0.2 }}
+                            className="text-industrial-white/50 text-lg leading-relaxed max-w-md"
+                        >
                             Provide the baseline operational data below. We will perform a deep-dive diagnostic of your infrastructure and return a roadmap for sustainable growth.
-                        </p>
-                    </motion.div>
+                        </motion.p>
+                    </header>
 
                     <motion.div
                         initial={{ opacity: 0, y: 20 }}

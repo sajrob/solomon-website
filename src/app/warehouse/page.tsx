@@ -1,37 +1,67 @@
+"use client";
+
 import { ArrowUpRight, Box, Code2, Database, Globe, Layers, Server } from "lucide-react";
-import type { Metadata } from "next";
-
-export const metadata: Metadata = {
-    title: "Warehouse | Deployed Solutions",
-    description: "A catalogue of engineered systems and successful deployments.",
-};
-
+import { motion } from "framer-motion";
 import { PORTFOLIO_DATA } from "@/data/portfolio";
 
 export default function WarehousePage() {
+    const fadeIn = {
+        initial: { opacity: 0, y: 20 },
+        animate: { opacity: 1, y: 0 },
+        transition: { duration: 0.6 }
+    };
+
+    const staggerContainer = {
+        animate: {
+            transition: {
+                staggerChildren: 0.1
+            }
+        }
+    };
+
     return (
-        <div className="min-h-screen bg-industrial-slate text-white pt-24 pb-20 px-6">
+        <div className="min-h-screen bg-industrial-slate text-white pt-24 pb-20 px-6 bg-grid-pattern bg-[size:50px_50px]">
             <div className="max-w-6xl mx-auto">
                 <header className="mb-20">
-                    <div className="flex items-center gap-4 mb-4 text-industrial-blue font-mono text-sm tracking-widest uppercase">
+                    <motion.div
+                        {...fadeIn}
+                        className="flex items-center gap-4 mb-4 text-industrial-blue font-mono text-sm tracking-widest uppercase"
+                    >
                         <Box className="w-4 h-4" />
                         <span>/ PROJECT_WAREHOUSE</span>
-                    </div>
-                    <h1 className="text-4xl sm:text-6xl md:text-7xl font-bold tracking-tighter mb-6 bg-clip-text text-transparent bg-gradient-to-r from-white via-white/80 to-industrial-blue/20">
+                    </motion.div>
+                    <motion.h1
+                        initial={{ opacity: 0, x: -30 }}
+                        animate={{ opacity: 1, x: 0 }}
+                        transition={{ duration: 0.8 }}
+                        className="text-4xl sm:text-6xl md:text-7xl font-bold tracking-tighter mb-6 bg-clip-text text-transparent bg-gradient-to-r from-white via-white/80 to-industrial-blue/20"
+                    >
                         Objective Outcomes.
-                    </h1>
-                    <p className="max-w-xl text-white/50 text-lg leading-relaxed font-light">
+                    </motion.h1>
+                    <motion.p
+                        initial={{ opacity: 0, x: 30 }}
+                        animate={{ opacity: 1, x: 0 }}
+                        transition={{ duration: 0.8, delay: 0.2 }}
+                        className="max-w-xl text-white/50 text-lg leading-relaxed font-light"
+                    >
                         A repository of solved business problems. These aren't just technical deployments;
                         they are engineered systems designed to drive terminal growth and operational stability.
-                    </p>
+                    </motion.p>
                 </header>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-px bg-white/10 border border-white/10 rounded-2xl overflow-hidden shadow-2xl shadow-industrial-blue/5">
+                <motion.div
+                    initial="initial"
+                    whileInView="animate"
+                    viewport={{ once: true }}
+                    variants={staggerContainer}
+                    className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-px bg-white/10 border border-white/10 rounded-2xl overflow-hidden shadow-2xl shadow-industrial-blue/5"
+                >
                     {[...PORTFOLIO_DATA]
                         .sort((a, b) => b.date.localeCompare(a.date))
                         .map((project, index) => (
-                            <div
+                            <motion.div
                                 key={project.id}
+                                variants={fadeIn}
                                 className="group relative bg-industrial-slate p-8 hover:bg-white/[0.02] transition-colors duration-300 flex flex-col h-full 
                                 border-b border-white/5 md:border-r md:last:border-r-0"
                             >
@@ -79,19 +109,23 @@ export default function WarehousePage() {
                                         </a>
                                     </div>
                                 </div>
-                            </div>
+                            </motion.div>
                         ))}
 
                     {/* Placeholder for "Coming Soon" or styling filler */}
                     {[1, 2, 3].map((i) => (
-                        <div key={`filler-${i}`} className="bg-industrial-slate p-8 flex items-center justify-center opacity-30 pointer-events-none border-b border-white/5 md:border-r md:last:border-r-0">
+                        <motion.div
+                            key={`filler-${i}`}
+                            variants={fadeIn}
+                            className="bg-industrial-slate p-8 flex items-center justify-center opacity-30 pointer-events-none border-b border-white/5 md:border-r md:last:border-r-0"
+                        >
                             <div className="text-center">
                                 <Database className="w-8 h-8 text-white/10 mx-auto mb-4" />
-                                <div className="text-xs font-mono text-white/20 uppercase tracking-widest">Awaiting_Declass...</div>
+                                <div className="text-[10px] font-mono text-white/20 uppercase tracking-widest">Awaiting_Declass...</div>
                             </div>
-                        </div>
+                        </motion.div>
                     ))}
-                </div>
+                </motion.div>
             </div>
         </div>
     );

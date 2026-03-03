@@ -60,30 +60,35 @@ const METHODOLOGY_PHASES = [
 ];
 
 export default function ServicesPage() {
+    const fadeIn = {
+        initial: { opacity: 0, y: 20 },
+        animate: { opacity: 1, y: 0 },
+        transition: { duration: 0.6 }
+    };
+
     return (
         <div className="min-h-screen bg-industrial-slate text-white pt-24 pb-20 px-6 bg-grid-pattern bg-[size:50px_50px]">
             <div className="max-w-6xl mx-auto">
                 <header className="mb-32">
                     <motion.div
-                        initial={{ opacity: 0, x: -20 }}
-                        animate={{ opacity: 1, x: 0 }}
+                        {...fadeIn}
                         className="flex items-center gap-4 mb-4 text-industrial-blue font-mono text-sm tracking-widest uppercase"
                     >
                         <Cpu className="w-4 h-4" />
                         <span>/ REQ_SPECIFICATION_V2</span>
                     </motion.div>
                     <motion.h1
-                        initial={{ opacity: 0, y: 20 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        transition={{ delay: 0.1 }}
+                        initial={{ opacity: 0, x: -30 }}
+                        animate={{ opacity: 1, x: 0 }}
+                        transition={{ duration: 0.8 }}
                         className="text-4xl sm:text-6xl md:text-8xl font-bold tracking-tighter mb-8 bg-clip-text text-transparent bg-gradient-to-b from-white to-white/40"
                     >
                         Solutions Over Syntax.
                     </motion.h1>
                     <motion.p
-                        initial={{ opacity: 0, y: 20 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        transition={{ delay: 0.2 }}
+                        initial={{ opacity: 0, x: 30 }}
+                        animate={{ opacity: 1, x: 0 }}
+                        transition={{ duration: 0.8, delay: 0.2 }}
                         className="max-w-3xl text-white/50 text-xl leading-relaxed font-light"
                     >
                         We don't force business problems into a pre-selected tech stack. We engineer systems based

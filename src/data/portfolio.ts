@@ -233,6 +233,84 @@ export const PORTFOLIO_DATA: PortfolioItem[] = [
         }
     },
     {
+        id: "NT-2026-Q1",
+        slug: "nabeela-tunis-digital-hq",
+        name: "Hon. Nabeela Tunis Official Portal",
+        desc: "A premium, secure digital hub designed to centralize the professional biography, legislative news, and philanthropic initiatives of Hon. Nabeela Tunis.",
+        stack: ["React 18", "Vite", "Tailwind CSS", "TypeScript", "Framermotion"],
+        status: "LIVE_SYSTEM",
+        metric: "Top 3 Search Ranking",
+        link: "/warehouse/nabeela-tunis-digital-hq",
+        details: {
+            title: "Strategic Digital Identity & Communications Hub",
+            client: "Hon. Nabeela Tunis",
+            date: "2026.Q1",
+            role: "Digital Strategist & Lead Developer",
+            metrics: [
+                { label: "Search Authority", value: "95/100" },
+                { label: "Asset Load Time", value: "< 0.8s" },
+                { label: "Mobile Accessibility", value: "WCAG 2.1" },
+                { label: "Security Layer", value: "Enterprise WAF" }
+            ],
+            overview: "Designed and deployed a sophisticated personal brand ecosystem for Hon. Nabeela Tunis. The project focused on a modular, component-driven architecture, ensuring that her extensive career milestones and philanthropic efforts are delivered through a high-performance, type-safe interface.",
+            phases: [
+                {
+                    number: "01",
+                    title: "Brand Architecture & Identity Mapping",
+                    description: "Translating a multi-decade career into a cohesive digital narrative and structural hierarchy.",
+                    requirements: [
+                        "Strategic mapping of political and philanthropic milestones",
+                        "High-resolution media asset management and optimization",
+                        "SEO keyword strategy for public figure authority",
+                        "Stakeholder alignment on visual 'Statesman' aesthetic"
+                    ],
+                    solutions: [
+                        "Developed a modular content strategy to separate 'News' from 'Biography'",
+                        "Curated a professional color palette emphasizing trust and leadership",
+                        "Architected a 'Career Timeline' database schema for dynamic scaling",
+                        "Implemented schema.org 'Person' markup for enhanced Google Knowledge Graph presence"
+                    ]
+                },
+                {
+                    number: "02",
+                    title: "Systemic React Development",
+                    description: "Developing a resilient frontend with a modular component architecture for rapid deployment.",
+                    requirements: [
+                        "Client-side routing with optimized page transitions",
+                        "Component-based UI logic for high maintainability",
+                        "TypeScript integration for enterprise-grade type safety",
+                        "Responsive, media-heavy layout for high-end photography"
+                    ],
+                    solutions: [
+                        "Utilized React 18 and Vite for a lightning-fast build and development cycle",
+                        "Standardized the development environment with Tailwind CSS and custom config",
+                        "Architected a scalable file structure with pages in src/pages and reusable UI in src/components",
+                        "Defined robust technical types in a centralized types.ts to ensure data integrity"
+                    ]
+                },
+                {
+                    number: "03",
+                    title: "Security Hardening & Management",
+                    description: "Establishing a 'fortress' environment to protect the integrity of a high-profile public figure.",
+                    requirements: [
+                        "Mitigation of DDoS and brute-force attack vectors",
+                        "Automated SSL management and secure DNS routing",
+                        "Daily cloud backups of the entire media library",
+                        "Ongoing performance monitoring and SEO auditing"
+                    ],
+                    solutions: [
+                        "Integrated Cloudflare Enterprise-level WAF for traffic scrubbing",
+                        "Established an automated CI/CD pipeline for secure, audited code updates",
+                        "Implemented advanced caching layers to handle viral traffic spikes",
+                        "Provided quarterly analytics reports on reach and audience engagement"
+                    ]
+                }
+            ]
+        },
+        date: ""
+    },
+
+    {
         id: "UMU-2021-Q4",
         slug: "umu-institutional-portal",
         name: "UMU Academic Ecosystem",
@@ -306,7 +384,10 @@ export const PORTFOLIO_DATA: PortfolioItem[] = [
                 }
             ]
         }
-    }
+    },
+
+
+
     // {
     //     id: "[UNIQUE_ID]",
     //     slug: "[url-friendly-slug]",
@@ -345,5 +426,7 @@ export const PORTFOLIO_DATA: PortfolioItem[] = [
     //         ]
     //     }
     // }
+
+
 
 ];
