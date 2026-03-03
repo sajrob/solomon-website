@@ -36,9 +36,28 @@ export default function CaseStudyPage({ params }: { params: Promise<{ slug: stri
                     <h2 className="text-xl font-mono text-industrial-blue uppercase tracking-widest mb-6 flex items-center gap-3">
                         Mission_Log
                     </h2>
-                    <p className="text-xl md:text-2xl text-white/70 leading-relaxed font-light">
+                    <p className="text-xl md:text-2xl text-white/70 leading-relaxed font-light mb-8">
                         {data.overview}
                     </p>
+
+                    {project.liveUrl && (
+                        <motion.a
+                            href={project.liveUrl}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            initial={{ opacity: 0 }}
+                            whileInView={{ opacity: 1 }}
+                            transition={{ delay: 0.3 }}
+                            className="inline-flex items-center gap-3 text-industrial-blue hover:text-white transition-colors group"
+                        >
+                            <div className="w-10 h-10 rounded-full border border-industrial-blue/30 flex items-center justify-center group-hover:border-white transition-colors">
+                                <Globe className="w-4 h-4" />
+                            </div>
+                            <span className="text-xs font-mono uppercase tracking-[0.3em]">
+                                View_Project
+                            </span>
+                        </motion.a>
+                    )}
                 </motion.div>
 
                 <div className="space-y-4">

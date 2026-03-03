@@ -11,6 +11,7 @@ export const PORTFOLIO_DATA: PortfolioItem[] = [
         status: "LIVE_SYSTEM",
         metric: "99.98% Uptime",
         link: "/warehouse/radio-democracy",
+        liveUrl: "",
         details: {
             title: "Radio Democracy FM98.1",
             client: "Radio Democracy",
@@ -88,6 +89,7 @@ export const PORTFOLIO_DATA: PortfolioItem[] = [
         status: "ARCHIVED",
         metric: "99.9% System Uptime",
         link: "/warehouse/sensi-tech-digital-overhaul",
+        liveUrl: "https://web.archive.org/web/20170705130207/http://sensi-sl.org/",
         details: {
             title: "Full-Stack Infrastructure & Secure Communications Overhaul",
             client: "Sensi Tech",
@@ -165,6 +167,7 @@ export const PORTFOLIO_DATA: PortfolioItem[] = [
         status: "ARCHIVED",
         metric: "100% Data Retention",
         link: "/warehouse/freetown-business-school-administration",
+        liveUrl: "https://web.archive.org/web/20220528193341/https://fbs.edu.sl/",
         details: {
             title: "Institutional Website & Infrastructure Management",
             client: "Freetown Business School",
@@ -241,6 +244,7 @@ export const PORTFOLIO_DATA: PortfolioItem[] = [
         status: "LIVE_SYSTEM",
         metric: "Top 3 Search Ranking",
         link: "/warehouse/nabeela-tunis-digital-hq",
+        liveUrl: "https://nabeelatunis.com",
         details: {
             title: "Strategic Digital Identity & Communications Hub",
             client: "Hon. Nabeela Tunis",
@@ -307,7 +311,7 @@ export const PORTFOLIO_DATA: PortfolioItem[] = [
                 }
             ]
         },
-        date: ""
+        date: "2026.Q1"
     },
 
     {
@@ -320,6 +324,7 @@ export const PORTFOLIO_DATA: PortfolioItem[] = [
         status: "ARCHIVED",
         metric: "40% Increase in Inquiries",
         link: "/warehouse/umu-institutional-portal",
+        liveUrl: "https://web.archive.org/web/20230919024200/https://umu.edu.sl/",
         details: {
             title: "United Methodist University Digital Transformation",
             client: "United Methodist University",

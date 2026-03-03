@@ -31,5 +31,6 @@ export interface PortfolioItem {
     status: "LIVE_SYSTEM" | "BETA_TEST" | "IN_DEVELOPMENT" | "ARCHIVED";
     metric: string;
     link: string;
+    liveUrl?: string;
     details?: CaseStudy;
 }
