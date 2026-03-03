@@ -1,0 +1,52 @@
+@import "tailwindcss";
+@config "../../tailwind.config.ts";
+
+@theme {
+  --color-industrial-slate: #0A0F1C;
+  --color-industrial-gray: #1E293B;
+  --color-industrial-blue: #3B82F6;
+  --color-industrial-emerald: #10B981;
+  --color-industrial-amber: #F59E0B;
+  --color-industrial-red: #EF4444;
+
+  --font-sans: var(--font-inter);
+  --font-mono: var(--font-jetbrains-mono);
+}
+
+:root {
+  --background: #0A0F1C;
+  --foreground: #F8FAFC;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Precision Grid Background */
+.grid-bg {
+  background-size: 40px 40px;
+  background-image:
+    linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+  mask-image: radial-gradient(circle at center, black 40%, transparent 100%);
+}
+
+.animate-scan {
+  background: linear-gradient(to bottom, transparent, rgba(59, 130, 246, 0.1), transparent);
+  background-size: 100% 200%;
+  animation: scan 4s linear infinite;
+}
+
+@keyframes scan {
+  from {
+    background-position: 0% 0%;
+  }
+
+  to {
+    background-position: 0% 200%;
+  }
+}
