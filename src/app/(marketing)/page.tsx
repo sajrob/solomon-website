@@ -49,7 +49,7 @@ export default function Home() {
               initial={{ opacity: 0, x: -30 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8 }}
-              className="text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-black tracking-tighter leading-[0.95] md:leading-[0.9] text-white mb-8"
+              className="text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-black tracking-tighter leading-[0.95] md:leading-[0.9] mb-8 bg-clip-text text-transparent bg-gradient-to-b from-white to-white/40 mb-8"
             >
               Strategic Engineering<br />
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-white to-industrial-emerald">
