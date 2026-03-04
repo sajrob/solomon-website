@@ -34,7 +34,7 @@ export default function WarehousePage() {
                         initial={{ opacity: 0, x: -30 }}
                         animate={{ opacity: 1, x: 0 }}
                         transition={{ duration: 0.8 }}
-                        className="text-4xl sm:text-6xl md:text-7xl font-bold tracking-tighter mb-6 bg-clip-text text-transparent bg-gradient-to-r from-white via-white/80 to-industrial-blue/20"
+                        className="text-4xl sm:text-6xl md:text-8xl font-bold tracking-tighter mb-6 bg-clip-text text-transparent bg-gradient-to-r from-white via-white/80 to-industrial-blue/20"
                     >
                         Objective Outcomes.
                     </motion.h1>
